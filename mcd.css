@@ -1,0 +1,133 @@
+@import url('https://fonts.googleleapis.com/css2?family=poppins:wght@400;800&display=swap');
+/*Base styling */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-size: cover;
+    background: url(downloads/1.jpg);
+}
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+h1{
+    color: black;
+    margin: 16px 0;
+    font-weight: 600;
+}
+h3{
+    margin: 16px 0;
+    font-weight: 200;
+}
+p{
+   margin: 16px 0;
+   line-height: 1.75;
+   font-weight: 200; 
+}
+img{
+    max-width: 100%;
+    height: auto;
+    margin-top: 15px;
+}
+/*Navigation*/
+header{
+
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 70%;
+
+}
+nav ul li{
+    display: inline;
+    padding: 0 16px;
+}
+nav ul li a{
+    color:black;
+
+}
+.mobile{
+    display: none;
+}
+@media(max-width:768px){
+    nav{
+        position: static;
+    }
+    nav ul {
+        
+    }
+}
+
+
+
+/*Aside*/
+
+aside{
+    padding: 64px;
+}
+aside.comments.archives.post{
+    margin: 70px;
+}
+/*blog*/
+
+.Blog-post h1{
+    color: dodgerblue;
+}
+.Blog-post a{
+    color:black;
+}
+.Blog-Post{
+    padding: 32px;
+}
+
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 100px auto 100px;
+    height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+}
+header{
+    background-color: dodgerblue;
+    grid-column-start: span 3;
+}
+aside{
+    background-color: aqua;
+    grid-column-start: span 1;
+}
+main{
+    background-color: greenyellow;
+    grid-column-start: span 2;
+}
+footer{
+    background-color: dodgerblue;
+    grid-column-start: span 3;
+    font-style: italic;
+    align-items: center;
+
+}
+
+@media(max-width:768px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px auto auto 100px;
+    }
+    header,aside,main,footer{
+        grid-column-start: span 3;
+    }
+}
